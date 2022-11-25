@@ -1,0 +1,62 @@
+<?php
+include("menu.html");
+if ($_SESSION['tipo']!=1) {
+    header('location: menu.html');
+}
+    ?>
+    <br><br>
+    <center>
+    <form action="funciones/insertar_usuario.php" method="post" id="formulario" class="container">
+
+        <h2>
+     Registrar usuario nuevo
+</h2>
+<div class="row">
+     <div class="col-6">
+          <label>Nombres:</label>
+          <input class="form-control" type="text" name="username">
+          <br> 
+     </div>
+     <br>
+     <br>
+     <div class="col-6">
+
+          <label>Apellido Paterno:</label>
+          <input class="form-control" type="text" name="username">
+          <br> 
+     </div>
+     <br>
+     <br>
+     <div class="col-6">
+          <label>Apellido Materno:</label>
+          <input class="form-control" type="text" name="username">
+     </div>
+
+     <br>
+<div class="col-6">
+ <br> 
+          <label>Usuario:</label>
+          <input class="form-control" type="text" name="username">
+          <br> 
+     </div>
+     <br>
+     <br>
+
+     <div class="col-6">
+          <label>Contraseña:</label>
+          <input class="form-control" type="password" name="pass">
+          <br> 
+     </div>
+    <br> 
+     <br>
+     <label>Tipo:</label>
+        <select name="tipo" class="form-control">
+        <option value="1">Administrador</option>
+        <option value="2">Mortal</option>
+        </select>
+    <br> 
+       
+ <input class="btn btn-outline-dark" type="submit" value="Guardar">
+
+    </form>
+     </center>
